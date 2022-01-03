@@ -19,7 +19,7 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '6.0.*'
-    - run: dotnet publish -c Release --runtime win-x86 .\OhmGraphite\
+    - run: dotnet publish -c Release --self-contained --runtime win-x86 .\OhmGraphite\
     - name: Set artifact name
       shell: bash
       working-directory: OhmGraphite\bin
